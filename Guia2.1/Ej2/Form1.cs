@@ -50,7 +50,7 @@ namespace Ej2
             for(int i = 0; i<miEmpresa.liquidaciones.Count;i++)
             {
                 Liquidacion liq = miEmpresa.liquidaciones[i] as Liquidacion;
-                lbLiquidaciones.Items.Add(liq.VerImpreso());
+                tbliqs.Text = liq.VerImpreso();
             }
         }
     }

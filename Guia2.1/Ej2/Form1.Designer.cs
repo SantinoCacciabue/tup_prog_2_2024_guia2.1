@@ -40,17 +40,17 @@
             this.label7 = new System.Windows.Forms.Label();
             this.tBnombre = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.tBdni = new System.Windows.Forms.TextBox();
-            this.tbApellido = new System.Windows.Forms.TextBox();
-            this.tBaño = new System.Windows.Forms.TextBox();
-            this.tBh100 = new System.Windows.Forms.TextBox();
-            this.tBh50 = new System.Windows.Forms.TextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.lbEmpleados = new System.Windows.Forms.ListBox();
-            this.bRegistrar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.bRegistrar = new System.Windows.Forms.Button();
+            this.lbEmpleados = new System.Windows.Forms.ListBox();
+            this.tBh50 = new System.Windows.Forms.TextBox();
+            this.tBh100 = new System.Windows.Forms.TextBox();
+            this.tBaño = new System.Windows.Forms.TextBox();
+            this.tbApellido = new System.Windows.Forms.TextBox();
+            this.tBdni = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.bGenerarliq = new System.Windows.Forms.Button();
-            this.lbLiquidaciones = new System.Windows.Forms.ListBox();
+            this.tbliqs = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.nMes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nAño)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -184,33 +184,33 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registrar empleado";
             // 
-            // tBdni
+            // button1
             // 
-            this.tBdni.Location = new System.Drawing.Point(132, 69);
-            this.tBdni.Name = "tBdni";
-            this.tBdni.Size = new System.Drawing.Size(101, 20);
-            this.tBdni.TabIndex = 11;
+            this.button1.Location = new System.Drawing.Point(132, 298);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "Cancelar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // tbApellido
+            // bRegistrar
             // 
-            this.tbApellido.Location = new System.Drawing.Point(133, 44);
-            this.tbApellido.Name = "tbApellido";
-            this.tbApellido.Size = new System.Drawing.Size(100, 20);
-            this.tbApellido.TabIndex = 12;
+            this.bRegistrar.Location = new System.Drawing.Point(32, 298);
+            this.bRegistrar.Name = "bRegistrar";
+            this.bRegistrar.Size = new System.Drawing.Size(75, 23);
+            this.bRegistrar.TabIndex = 16;
+            this.bRegistrar.Text = "Registrar";
+            this.bRegistrar.UseVisualStyleBackColor = true;
+            this.bRegistrar.Click += new System.EventHandler(this.bRegistrar_Click);
             // 
-            // tBaño
+            // lbEmpleados
             // 
-            this.tBaño.Location = new System.Drawing.Point(132, 92);
-            this.tBaño.Name = "tBaño";
-            this.tBaño.Size = new System.Drawing.Size(49, 20);
-            this.tBaño.TabIndex = 13;
-            // 
-            // tBh100
-            // 
-            this.tBh100.Location = new System.Drawing.Point(132, 145);
-            this.tBh100.Name = "tBh100";
-            this.tBh100.Size = new System.Drawing.Size(49, 20);
-            this.tBh100.TabIndex = 14;
+            this.lbEmpleados.FormattingEnabled = true;
+            this.lbEmpleados.Location = new System.Drawing.Point(6, 171);
+            this.lbEmpleados.Name = "lbEmpleados";
+            this.lbEmpleados.Size = new System.Drawing.Size(240, 121);
+            this.lbEmpleados.TabIndex = 13;
             // 
             // tBh50
             // 
@@ -219,9 +219,37 @@
             this.tBh50.Size = new System.Drawing.Size(49, 20);
             this.tBh50.TabIndex = 15;
             // 
+            // tBh100
+            // 
+            this.tBh100.Location = new System.Drawing.Point(132, 145);
+            this.tBh100.Name = "tBh100";
+            this.tBh100.Size = new System.Drawing.Size(49, 20);
+            this.tBh100.TabIndex = 14;
+            // 
+            // tBaño
+            // 
+            this.tBaño.Location = new System.Drawing.Point(132, 92);
+            this.tBaño.Name = "tBaño";
+            this.tBaño.Size = new System.Drawing.Size(49, 20);
+            this.tBaño.TabIndex = 13;
+            // 
+            // tbApellido
+            // 
+            this.tbApellido.Location = new System.Drawing.Point(133, 44);
+            this.tbApellido.Name = "tbApellido";
+            this.tbApellido.Size = new System.Drawing.Size(100, 20);
+            this.tbApellido.TabIndex = 12;
+            // 
+            // tBdni
+            // 
+            this.tBdni.Location = new System.Drawing.Point(132, 69);
+            this.tBdni.Name = "tBdni";
+            this.tBdni.Size = new System.Drawing.Size(101, 20);
+            this.tBdni.TabIndex = 11;
+            // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.lbLiquidaciones);
+            this.groupBox2.Controls.Add(this.tbliqs);
             this.groupBox2.Controls.Add(this.bGenerarliq);
             this.groupBox2.Controls.Add(this.nMes);
             this.groupBox2.Controls.Add(this.nAño);
@@ -234,34 +262,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Generar Liquidaciones";
             // 
-            // lbEmpleados
-            // 
-            this.lbEmpleados.FormattingEnabled = true;
-            this.lbEmpleados.Location = new System.Drawing.Point(6, 171);
-            this.lbEmpleados.Name = "lbEmpleados";
-            this.lbEmpleados.Size = new System.Drawing.Size(240, 121);
-            this.lbEmpleados.TabIndex = 13;
-            // 
-            // bRegistrar
-            // 
-            this.bRegistrar.Location = new System.Drawing.Point(32, 298);
-            this.bRegistrar.Name = "bRegistrar";
-            this.bRegistrar.Size = new System.Drawing.Size(75, 23);
-            this.bRegistrar.TabIndex = 16;
-            this.bRegistrar.Text = "Registrar";
-            this.bRegistrar.UseVisualStyleBackColor = true;
-            this.bRegistrar.Click += new System.EventHandler(this.bRegistrar_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(132, 298);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "Cancelar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // bGenerarliq
             // 
             this.bGenerarliq.Location = new System.Drawing.Point(167, 22);
@@ -272,13 +272,14 @@
             this.bGenerarliq.UseVisualStyleBackColor = true;
             this.bGenerarliq.Click += new System.EventHandler(this.bGenerarliq_Click);
             // 
-            // lbLiquidaciones
+            // tbliqs
             // 
-            this.lbLiquidaciones.FormattingEnabled = true;
-            this.lbLiquidaciones.Location = new System.Drawing.Point(6, 119);
-            this.lbLiquidaciones.Name = "lbLiquidaciones";
-            this.lbLiquidaciones.Size = new System.Drawing.Size(581, 147);
-            this.lbLiquidaciones.TabIndex = 18;
+            this.tbliqs.Location = new System.Drawing.Point(17, 81);
+            this.tbliqs.Multiline = true;
+            this.tbliqs.Name = "tbliqs";
+            this.tbliqs.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tbliqs.Size = new System.Drawing.Size(391, 149);
+            this.tbliqs.TabIndex = 5;
             // 
             // Form1
             // 
@@ -323,7 +324,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button bRegistrar;
         private System.Windows.Forms.Button bGenerarliq;
-        private System.Windows.Forms.ListBox lbLiquidaciones;
+        private System.Windows.Forms.TextBox tbliqs;
     }
 }
 

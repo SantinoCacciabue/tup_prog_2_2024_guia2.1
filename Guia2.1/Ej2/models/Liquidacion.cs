@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Ej2.models
 {
@@ -120,7 +121,8 @@ namespace Ej2.models
         }
         public string VerImpreso()
         {
-            return "Empleado: " + Empleado.ApellidoNombre +
+            string impreso = null;
+            return impreso = "Empleado: " + Empleado.ApellidoNombre +
                 Environment.NewLine + "Básico: " + MontoBasico +
                 Environment.NewLine + "Antiguedad(" + Empleado.Antiguedad + "%):" + MontoAntiguedad
                 + Environment.NewLine + "Extras al 50%(" + Empleado.HorasExtra50 + ")" + MontoExtras50
